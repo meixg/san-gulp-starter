@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Todos</title>
+        <link rel="stylesheet" href="src/index.css">
+        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
+        <script>
+            require.config({
+                baseUrl: 'dist',
+                paths: {
+                    moment: '../node_modules/moment/moment',
+                    jquery: '../node_modules/jquery/dist/jquery',
+                    san: '../node_modules/san/dist/san',
+                    app: 'bundle.js'
+                },
+                waitSeconds: 3
+            });
+        </script>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        <script>
+            require(
+                ['app'],
+                function (app) {
+                    app.init();
+                }
+            );
+        </script>
+    </body>
+</html>

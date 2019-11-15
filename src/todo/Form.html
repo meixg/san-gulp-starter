@@ -1,0 +1,14 @@
+<div class="form">
+    <input type="text" class="form-title" placeholder="标题" value="{= todo.title =}">
+    <textarea class="form-desc" placeholder="备注" value="{= todo.desc =}"></textarea>
+
+    <ui-categorypicker datasource="{{categories}}" value="{= todo.categoryId =}"></ui-categorypicker>
+    <i class="fa fa-plus add-category" on-click="startAddCategory"></i>
+    <i class="fa fa-pencil edit-category" on-click="startEditCategory"></i>
+    <div>预期完成时间： <ui-calendar value="{= endTimeDate =}"></ui-calendar><ui-timepicker value="{= endTimeHour =}"></ui-timepicker></div>
+
+    <div class="form-op">
+        <button type="button" class="form-ok" on-click="submit"><i class="fa fa-check-circle-o"></i></button>
+        <button type="button" class="form-cancel" on-click="cancel"><i class="fa fa-times-circle-o"></i></button>
+    </div>
+</div>
