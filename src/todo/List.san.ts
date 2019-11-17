@@ -5,13 +5,12 @@ import template from './List.html!text';
 export default san.defineComponent({
     template: template,
     initData: function () {
+        const categories = service.categories();
         return {
-            aaa: 'aaa'
+            aaa: 'aaa',
+            categories,
+            todos: service.todos()
         };
-    },
-
-    filters: {
-        formatDate: require('../filters').formatDate
     },
 
     route: function () {

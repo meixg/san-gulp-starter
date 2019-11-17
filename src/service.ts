@@ -18,7 +18,7 @@ function extend(target, source) {
     return target;
 }
 
-export function todos(category) {
+export function todos(category?: any) {
     var categoryMap = {};
     for (var i = 0; i < data.category.length; i++) {
         var item = data.category[i];
