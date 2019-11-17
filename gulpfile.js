@@ -8,6 +8,7 @@ const inlineSanTemplate = require('gulp-parser-inline').parseSan;
 const amdWrap = require('gulp-amd-wrap').amdWrap;
 const gulpIf = require('gulp-if');
 const babel = require('gulp-babel');
+const inlinesource = require('gulp-inline-source');
 
 function isSan(file) {
     return /.san.[jt]s$/.test(file.path);
@@ -84,6 +85,7 @@ gulp.task('html', function () {
     const manifest = gulp.src("./dist/rev-manifest.json");
     return gulp.src('index.html')
         .pipe(revReplace({manifest: manifest}))
+        .pipe(inlinesource())
         .pipe(gulp.dest('dist'));
 });
 
