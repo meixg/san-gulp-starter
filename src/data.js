@@ -1,4 +1,4 @@
-define({
+export default {
     "list": [
         {
             "id": 22,
@@ -88,4 +88,4 @@ define({
             "color": "#c23531"
         }
     ]
-});
+};

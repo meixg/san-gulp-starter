@@ -1,11 +1,6 @@
-define(function (require) {
-    var List = require('./todo/List');
+import List from './todo/List.san';
 
-    return {
-        init: function () {
-            var list = new List();
-            list.attach('#wrap');
-        }
-    };
-
-});
+export function init() {
+    var list = new List();
+    list.attach(document.getElementById('wrap'));
+}

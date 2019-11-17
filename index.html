@@ -3,15 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <title>Todos</title>
-        <link rel="stylesheet" href="src/index.css">
-        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
+        <link rel="stylesheet" href="static/bundle.css">
+        <script src="static/pre-script.js"></script>
         <script>
             require.config({
-                baseUrl: 'dist',
+                baseUrl: '/static',
                 paths: {
-                    moment: '../node_modules/moment/moment',
-                    jquery: '../node_modules/jquery/dist/jquery',
-                    san: '../node_modules/san/dist/san',
                     app: 'bundle.js'
                 },
                 waitSeconds: 3
