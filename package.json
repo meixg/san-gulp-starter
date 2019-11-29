@@ -2,7 +2,7 @@
     "name": "san-gulp-starter",
     "version": "0.1.0",
     "scripts": {
-        "dev": "npx http-server",
+        "dev": "npx http-server ./dist",
         "build": "npx gulp"
     },
     "keywords": [
